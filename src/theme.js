@@ -2,6 +2,7 @@
 
 // 1. import `extendTheme` function
 import { extendTheme } from '@chakra-ui/react'
+import { modalTheme } from './utils/theme/modal'
 
 // 2. Add your color mode config
 const config = {
@@ -10,6 +11,9 @@ const config = {
 }
 
 // 3. extend the theme
-const theme = extendTheme({ config })
+const theme = extendTheme({
+    config,
+    components: { Modal: modalTheme }
+})
 
 export default theme
