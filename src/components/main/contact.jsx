@@ -3,9 +3,9 @@ import {
     Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Text
 } from '@chakra-ui/react'
 import { Fragment, useState } from 'react'
-import { primaryColor, primaryFontColor, ternaryColor } from '../utils/globalTheme'
-import useWindowSize from '../hooks/useWindowSize'
-import { sendContactMessage } from '../api/form'
+import { primaryColor, primaryFontColor, ternaryColor } from '../../theme/globalTheme'
+import useWindowSize from '../../hooks/useWindowSize'
+import { sendContactMessage } from '../../api/form'
 
 function Contact() {
 

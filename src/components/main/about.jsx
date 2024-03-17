@@ -1,9 +1,9 @@
 import { Box, Flex, Heading, Image, Text, Button, Center } from '@chakra-ui/react'
-import about from '../assets/about.jpg'
+import about from '../../assets/about.jpg'
 import { motion } from 'framer-motion'
 import React, { Fragment } from 'react'
-import { primaryFontColor } from '../utils/globalTheme'
-import useWindowSize from '../hooks/useWindowSize'
+import { primaryFontColor } from '../../theme/globalTheme'
+import useWindowSize from '../../hooks/useWindowSize'
 
 function About() {
 

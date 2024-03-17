@@ -1,8 +1,8 @@
 import { Card, CardBody, Center, Divider, Flex, Heading, Image, Stack, Text } from '@chakra-ui/react'
 import { motion } from "framer-motion"
 import React, { Fragment } from 'react'
-import { primaryColor, primaryFontColor, ternaryColor } from '../utils/globalTheme'
-import useWindowSize from '../hooks/useWindowSize'
+import { primaryColor, primaryFontColor, ternaryColor } from '../../theme/globalTheme'
+import useWindowSize from '../../hooks/useWindowSize'
 
 function Project() {
 

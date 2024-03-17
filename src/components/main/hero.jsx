@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { IconContext } from "react-icons";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import TagCloud from 'TagCloud';
-import { primaryFontColor, ternaryColor } from '../utils/globalTheme';
+import { primaryFontColor, ternaryColor } from '../../theme/globalTheme';
 import { useEffect } from 'react'
 import Typewriter from 'typewriter-effect';
 import { Box, Flex, Text, Button, Divider } from '@chakra-ui/react'
-import useWindowSize from '../hooks/useWindowSize';
+import useWindowSize from '../../hooks/useWindowSize';
 import { Link } from 'react-router-dom';
 
 function Hero() {

@@ -1,7 +1,7 @@
 import { Heading, Card, Box, Flex, Image, Center, Text, Badge } from '@chakra-ui/react'
-import { primaryColor, primaryFontColor } from '../utils/globalTheme'
+import { primaryColor, primaryFontColor } from '../../theme/globalTheme'
 import React, { Fragment } from 'react'
-import useWindowSize from '../hooks/useWindowSize'
+import useWindowSize from '../../hooks/useWindowSize'
 
 function Experience() {
 

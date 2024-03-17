@@ -1,5 +1,5 @@
 import { Flex, Heading, Spacer, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
-import { primaryColor, primaryFontColor, secondaryColor } from '../utils/globalTheme'
+import { primaryColor, primaryFontColor, secondaryColor } from '../theme/globalTheme'
 import React, { Fragment } from 'react'
 import useWindowSize from '../hooks/useWindowSize'
 import { Link, useLocation } from 'react-router-dom'
@@ -53,6 +53,7 @@ function Navigation() {
                         </Link>
                     </Fragment>
                 )}
+
             </Flex>
         </Flex >
     )

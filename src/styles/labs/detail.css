@@ -1,0 +1,92 @@
+:root {
+    background: black;
+}
+
+.content p {
+    color: white;
+    /* Warna teks putih */
+    font-size: 1em;
+    /* Ukuran font default */
+    line-height: 1.5;
+    /* Jarak antara baris */
+    margin-bottom: 1em;
+    /* Jarak bawah */
+    color: whitesmoke;
+}
+
+.content pre {
+    padding: 5px;
+    border-radius: 10px;
+    white-space: pre-wrap;
+    /* Allows the text to wrap */
+    background-color: #2b2b2b;
+    font-family: Arial;
+    color: white;
+}
+
+.content li {
+    color: white;
+    /* Warna teks putih */
+    font-size: 1em;
+    /* UKuran font default */
+    line-height: 1.5;
+    /* Jarak antara baris */
+    margin-bottom: 1em;
+    /* Jarak bawah */
+    color: whitesmoke;
+}
+
+
+.content h1 {
+    font-size: 2em;
+    /* Ukuran font 2x ukuran default */
+    font-weight: bold;
+    /* Tebal */
+    margin-bottom: 0.5em;
+    /* Jarak bawah */
+    color: whitesmoke;
+}
+
+.content h2 {
+    font-size: 1.5em;
+    /* Ukuran font 1.5x ukuran default */
+    font-weight: bold;
+    margin-block: 0.83em;
+    /* Tebal */
+    margin-bottom: 0.5em;
+    /* Jarak bawah */
+    color: whitesmoke;
+}
+
+.content h3 {
+    font-size: 1.17em;
+    /* Ukuran font 1.17x ukuran default */
+    font-weight: bold;
+    margin-block: 0.83em;
+    /* Tebal */
+    margin-bottom: 0.5em;
+    /* Jarak bawah */
+    color: whitesmoke;
+}
+
+.content h4 {
+    font-size: 1em;
+    /* Ukuran font default */
+    font-weight: bold;
+    margin-block: 0.83em;
+    /* Tebal */
+    margin-bottom: 0.5em;
+    /* Jarak bawah */
+    color: whitesmoke;
+}
+
+.content h5 {
+    font-size: 0.83em;
+    /* Ukuran font 0.83x ukuran default */
+    font-weight: bold;
+    margin-block: 0.83em;
+    /* Tebal */
+    margin-bottom: 0.5em;
+    /* Jarak bawah */
+    color: whitesmoke;
+}

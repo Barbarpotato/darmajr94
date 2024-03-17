@@ -1,8 +1,8 @@
 import { Flex, Heading, Box, Image, Text } from '@chakra-ui/react'
 import React, { useState, useEffect, Fragment } from 'react';
 import { motion } from 'framer-motion';
-import { primaryFontColor, secondaryColor } from '../utils/globalTheme'
-import useWindowSize from '../hooks/useWindowSize'
+import { primaryFontColor, secondaryColor } from '../../theme/globalTheme'
+import useWindowSize from '../../hooks/useWindowSize'
 
 function Herolabs() {
 

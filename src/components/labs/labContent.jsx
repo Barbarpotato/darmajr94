@@ -1,11 +1,13 @@
 import React, { Fragment } from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardBody, Image, Flex, Heading, Text, Divider, Grid, Box, Button } from '@chakra-ui/react'
-import useWindowSize from '../hooks/useWindowSize'
-import { primaryColor, primaryFontColor } from '../utils/globalTheme'
+import useWindowSize from '../../hooks/useWindowSize'
+import { useNavigate } from 'react-router-dom'
+import { primaryColor, primaryFontColor } from '../../theme/globalTheme'
 
 function LabContent({ blog }) {
 
+    const navigate = useNavigate()
     const { width } = useWindowSize()
 
     return (
@@ -22,7 +24,7 @@ function LabContent({ blog }) {
                         }}>
                         <Grid style={{ marginTop: '100px', marginInline: width > 768 ? '100px' : '20px' }} templateColumns={width < 1280 ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)'} gap={6} >
                             {blog.map((item) => (
-                                <Card borderRadius={'2xl'} height={'500px'} boxShadow={'2xl'}>
+                                <Card key={item.id} borderRadius={'2xl'} mb={20} height={'500px'} boxShadow={'2xl'}>
                                     <Box
                                         display="flex"
                                         justifyContent="center"
@@ -39,10 +41,10 @@ function LabContent({ blog }) {
                                             <Heading color={primaryFontColor} size='md'>{item.title}</Heading>
                                             <Text color={primaryFontColor}>
                                                 {item.short_description.length > 230
-                                                    ? `${item.short_description.slice(0, 200)}...` // Truncate the string
+                                                    ? `${item.short_description.slice(0, 230)}...` // Truncate the string
                                                     : item.short_description}
                                             </Text>
-                                            <Button mt={5} w={'100px'} colorScheme='purple' color={primaryFontColor} rounded={'2xl'} fontSize={'xs'}>Read More...</Button>
+                                            <Button onClick={() => navigate(`/darmajr94/lab/${item.blog_id}`)} mt={5} w={'100px'} colorScheme='purple' color={primaryFontColor} rounded={'2xl'} fontSize={'xs'}>Read More...</Button>
                                         </Flex>
                                     </CardBody>
                                     <Divider />
@@ -69,21 +71,21 @@ function LabContent({ blog }) {
                                     justifyContent="center"
                                     alignItems="center">
                                     <Image
-                                        h={'300px'}
+                                        h={'260px'}
                                         src={item.image}
                                         alt={item.image_alt}
                                         borderRadius='lg'
                                     />
                                 </Box>
                                 <CardBody backgroundColor={primaryColor}>
-                                    <Flex height={'200px'} mt='6' direction='column'>
+                                    <Flex height={'220px'} mt={2} direction='column'>
                                         <Heading color={primaryFontColor} size='md'>{item.title}</Heading>
                                         <Text color={primaryFontColor}>
                                             {item.short_description.length > 230
                                                 ? `${item.short_description.slice(0, 200)}...` // Truncate the string
                                                 : item.short_description}
                                         </Text>
-                                        <Button mt={5} w={'100px'} colorScheme='purple' color={primaryFontColor} rounded={'2xl'} fontSize={'xs'}>Read More...</Button>
+                                        <Button onClick={() => navigate(`/darmajr94/lab/${item.blog_id}`)} mt={2} w={'100px'} colorScheme='purple' color={primaryFontColor} rounded={'xl'} fontSize={'xs'}>Read More...</Button>
                                     </Flex>
                                 </CardBody>
                                 <Divider />

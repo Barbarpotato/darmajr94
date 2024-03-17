@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import { FaGithub, FaInstagram, FaLinkedin, FaArrowAltCircleUp } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import { secondaryColor, primaryFontColor } from '../utils/globalTheme'
+import { secondaryColor, primaryFontColor } from '../theme/globalTheme'
 import { Flex, Heading, Box, Spacer, Divider, Text, Center } from '@chakra-ui/react'
 import useWindowSize from '../hooks/useWindowSize';
 import { useLocation } from 'react-router-dom';
