@@ -5,10 +5,13 @@ import { useQuery } from "react-query";
  *
  * @return {Promise} A promise that resolves with the JSON response containing the fetched blogs.
  */
-const fetchBlogs = async () => {
+const fetchBlogs = async (searchQuery) => {
     const username = import.meta.env.VITE_USERNAME;
     const password = import.meta.env.VITE_PASSWORD;
-    const url = `${import.meta.env.VITE_CERBERRY_ENDPOINT}/blogs/all`;
+
+    let url = "";
+    if (searchQuery != "") url = `${import.meta.env.VITE_CERBERRY_ENDPOINT}/blogs/search?title=${searchQuery}`;
+    else url = `${import.meta.env.VITE_CERBERRY_ENDPOINT}/blogs/all`;
 
     const headers = new Headers();
     headers.set('Authorization', 'Basic ' + btoa(username + ':' + password));
@@ -27,8 +30,8 @@ const fetchBlogs = async () => {
  *
  * @return {object} The result of the query for fetching blogs data.
  */
-export const useDatablogs = () => {
-    return useQuery('blogs-data', fetchBlogs, {
+export const useDatablogs = (searchQuery) => {
+    return useQuery('blogs-data', () => fetchBlogs(searchQuery), {
         cacheTime: 3600000
     })
 }

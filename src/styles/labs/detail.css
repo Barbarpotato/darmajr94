@@ -90,3 +90,19 @@
     /* Jarak bawah */
     color: whitesmoke;
 }
+
+/* styles.css */
+.custom-pre {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.custom-code {
+    /* Or scroll */
+    background-color: #272822;
+    color: #f8f8f2;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
