@@ -1,4 +1,3 @@
-import { delay } from 'framer-motion';
 import { dictionaryAPI } from '../../api/chatbot';
 import React from 'react';
 
@@ -9,7 +8,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         sessionStorage.setItem("isPlaying", "false");
 
         const botMessage = createChatBotMessage(
-            "oh, Hello!😁 Hopefully you have a wonderful day!. I hope you've enjoyed browsing my website. Can I help you with anything else?",
+            "oh, Hello!😁 Hopefully you have a wonderful day! I hope you've enjoyed browsing my website. Can I help you with anything else?",
             { withAvatar: false, widget: 'initialMessage' }
         );
 
@@ -60,7 +59,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
         const botMessage = createChatBotMessage(
             "Great!!!🥰 Let's Play Dictionary game. You will ask me anything about the english word. and i will give you an answer about that word. Ready for your word!!!🤔",
-            { withAvatar: false, widget: '' }
+            { withAvatar: false }
         );
 
         setState((prev) => ({
@@ -126,6 +125,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
             const botMessage = createChatBotMessage(
                 `"${sessionStorage.getItem("userQuery")}" is ${definition.definition}. \n ${definition.example ? `For example: ${definition.example}` : ''} `,
                 {
+                    withAvatar: false,
                     widget: "stopPlaying"
                 });
             setState((prev) => ({
