@@ -5,6 +5,9 @@ import React from 'react';
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
     const handleHello = () => {
+
+        sessionStorage.setItem("isPlaying", "false");
+
         const botMessage = createChatBotMessage(
             "oh, Hello!😁 Hopefully you have a wonderful day!. I hope you've enjoyed browsing my website. Can I help you with anything else?",
             { withAvatar: false, widget: 'initialMessage' }
@@ -17,6 +20,9 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }
 
     const handlePersonalInformation = () => {
+
+        sessionStorage.setItem("isPlaying", "false");
+
         const botMessage = createChatBotMessage(
             "Well, He currently working as a Software Engineer in PT Samamaju Prima. He responsible with Design, Build and Maintain software for internal company used. Using internal company Model View Controller (MVC) framework engine call ingrid, for build new software and maintain currently used software.",
             { withAvatar: false, delay: 1000, widget: 'initialMessage' }
@@ -30,6 +36,8 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
 
     const handleHiringReaction = () => {
+
+        sessionStorage.setItem("isPlaying", "false");
 
         const botMessage = createChatBotMessage(
             "Wow! 😱 Thank you for the opportunity. To send him a message and have a further discussion, I will redirect you to his LinkedIn",

@@ -5,6 +5,8 @@ const MessageParser = ({ children, actions }) => {
     const parse = (message) => {
         if (sessionStorage.getItem("isPlaying") === "true") {
             actions.handleDictionaryApi(message)
+        } else {
+            actions.handleHello()
         }
     };
 
